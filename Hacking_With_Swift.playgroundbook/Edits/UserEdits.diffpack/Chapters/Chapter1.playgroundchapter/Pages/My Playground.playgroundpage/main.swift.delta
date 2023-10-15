@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>func testFunction() {
+    let hello = "Hello World"
+    print(hello)
+}
+
+func isSuffixed(x: String, y: String) -&gt; Bool {
+    return(x.hasSuffix(y))
+}
+
+
+func printTemp(temp: Int) {
+    let fTemp = ((temp * 9) / 5) + 32
+    print("The temperature is \(temp)ºC, \(fTemp)ºF")
+}
+
+func printPresidents() {
+    var presidents = ["Bush", "Obama", "Trump", "Biden"]
+    let reversedPresidents = presidents.reversed()
+    print(reversedPresidents)
+
+    presidents = ["Bush", "Clinton", "Bush", "Obama", "Trump", "Biden"]
+    
+    print("The number of presidents since George HW Bush is \(presidents.count)")
+    
+    let uPresidents = Set(presidents)
+    
+    print("The number of unique last names is \(uPresidents.count)")
+}
+
+func fizzBuzz(input: Int) {
+    for i in 1 ... input {
+        if (i % 5 == 0 &amp;&amp; i % 3 == 0){
+            print("FizzBuzz")
+            continue
+        }
+        else if i % 5 == 0 {
+            print("Buzz")
+            continue
+        } else if i % 3 == 0 {
+            print("Fizz")
+            continue
+        } else {
+            print("\(i)")
+        }
+    }
+}
+
+fizzBuzz(input: 95)
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1108}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
