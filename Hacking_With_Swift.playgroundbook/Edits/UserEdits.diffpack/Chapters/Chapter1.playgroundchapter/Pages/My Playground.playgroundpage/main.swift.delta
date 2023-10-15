@@ -53,10 +53,27 @@ func fizzBuzz(input: Int) {
     }
 }
 
-fizzBuzz(input: 95)
+func findRoot(_ input: Int) throws {
+    enum InputError: Error {
+        case bounds
+    }
+    if (input &lt; 1 || input &gt; 9999) {
+        throw InputError.bounds
+    }
+    for i in 1 ... 99 {
+        if i * i == input {
+            print("Square root is \(i)")
+                   return
+        }
+ 
+    }
+    print("No square root found")
+}
+
+try? findRoot(360)
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 1108}</string>
+			<string>{1, 1448}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
