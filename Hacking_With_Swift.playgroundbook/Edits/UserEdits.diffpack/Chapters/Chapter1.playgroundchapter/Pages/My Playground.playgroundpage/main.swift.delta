@@ -70,10 +70,33 @@ func findRoot(_ input: Int) throws {
     print("No square root found")
 }
 
-try? findRoot(360)
+func makeArray(size: Int, using generator: () -&gt; Int) -&gt; [Int] {
+    var numbers = [Int]()
+    
+    for _ in 0..&lt;size {
+        let newNumber = generator()
+        numbers.append(newNumber)
+    }
+    return numbers
+}
+
+let luckyNumbers = [7, 4, 38, 21, 16, 15, 12, 33, 31, 49]
+
+func shoutLucky(_ input: [Int]) {
+    var strings = input
+        .filter { !$0.isMultiple(of: 2) }
+        .sorted { $0 &lt; $1 }
+        .map {  "\($0) is a lucky number" }
+    for string in strings {
+        print(string)
+    }
+}
+
+shoutLucky(luckyNumbers)
+
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 1448}</string>
+			<string>{1, 1963}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
