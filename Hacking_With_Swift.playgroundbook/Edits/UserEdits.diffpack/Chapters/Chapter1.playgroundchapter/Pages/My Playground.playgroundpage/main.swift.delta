@@ -92,11 +92,86 @@ func shoutLucky(_ input: [Int]) {
     }
 }
 
-shoutLucky(luckyNumbers)
+struct Car {
+    let model : String
+    let seats : Int
+    private(set) var gear = 1
+    
+    mutating func shiftUp() {
+        if gear &lt; 11 {
+            gear += 1
+        }
+        print("\(gear) gear")
+    }
+    
+    mutating func shiftDown() {
+        if gear &gt; 1 {
+            gear -= 1
+        }
+        print("\(gear) gear")
+    }
+    static let example = Car(model: "Honda Accord", seats: 2)
+}
+
+class Animal {
+    let legs: Int
+    
+    init(legs: Int) {
+        self.legs = legs
+    }
+}
+
+class Dog: Animal {
+    func speak() {
+        print("I'm a fucking dog")
+    }
+    init() {
+        super.init(legs: 4)
+    }
+}
+
+class Cat: Animal {
+    let isTame: Bool
+    func speak() {
+        print("I'm a fucking cat")
+    }
+    init(isTame: Bool) {
+        self.isTame = isTame
+        super.init(legs: 4)
+    }
+}
+
+class Corgi: Dog {
+    override func speak() {
+        print("I'm a fucking corgi")
+    }
+}
+
+class Poodle: Dog {
+    override func speak() {
+        print("I'm a fucking poodle")
+    }
+}
+
+class Persian: Cat {
+    override func speak() {
+        print("I'm a fucking persian")
+    }
+}
+
+class Lion: Cat {
+    override func speak() {
+        print("I'm a fucking lion")
+    }
+    init() {
+        super.init(isTame: false)
+    }
+}
+
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 1963}</string>
+			<string>{1, 3187}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
