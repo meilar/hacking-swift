@@ -168,10 +168,43 @@ class Lion: Cat {
     }
 }
 
+protocol Building {
+    var rooms: Int {get set}
+    var cost: Int {get set}
+    var agentName: String {get set}
+    
+    func summary() -&gt; Void
+}
+
+extension Building {
+    func summary() {
+        print("This listing costs $\(cost), has \(rooms) rooms, and is being sold by \(agentName)")
+    }
+}
+
+struct House: Building {
+    var rooms: Int
+    var cost: Int
+    var agentName: String
+}
+
+struct Office: Building {
+    var rooms: Int
+    var cost: Int
+    var agentName: String
+}
+
+let xHouse = House(rooms: 6, cost: 100000, agentName: "Agatha Bargela")
+
+let xOffice = Office(rooms: 12, cost: 6000000, agentName: "Hamical Barba")
+
+xOffice.summary();
+
+
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 3187}</string>
+			<string>{1, 3839}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
