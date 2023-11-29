@@ -198,13 +198,15 @@ let xHouse = House(rooms: 6, cost: 100000, agentName: "Agatha Bargela")
 
 let xOffice = Office(rooms: 12, cost: 6000000, agentName: "Hamical Barba")
 
-xOffice.summary();
+func randomInt(input: [Int]?) -&gt; Int {
+    return input?.randomElement() ?? Int.random(in: 1...100)
+}
 
 
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 3839}</string>
+			<string>{1, 3922}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
